@@ -7,7 +7,6 @@ import org.junit.runner.RunWith;
 @RunWith(JUnitPlatform.class)
 @SelectPackages("com.tagexample")
 @IncludeTags("desktop")
-
 public class TestSuiteByJunit {
 
 }
