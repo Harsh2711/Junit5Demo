@@ -1,3 +1,4 @@
+import java.time.Duration;
 import java.util.function.Supplier;
 
 import org.junit.jupiter.api.Assertions;
@@ -29,5 +30,11 @@ public class AssertionandAssumationExamples {
 	    Assumptions.assumeTrue("DEV".equals(System.getProperty("ENV")));
 	    System.setProperty("ENV", "PROD");
 	    Assumptions.assumeTrue("DEV".equals(System.getProperty("ENV")));
+	    
+	   
+	        //This will pass
+	        Assertions.assertTimeout(Duration.ofMinutes(1), () -> {
+	            return "result";
+	        });
 	}
 }
